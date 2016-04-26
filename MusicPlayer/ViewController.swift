@@ -15,12 +15,12 @@ var timer:NSTimer!
 
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet var trackTime: UILabel!
     @IBOutlet var trackTitle: UILabel!
     
-
-
+    
+    
     @IBAction func playPauseButton(sender: AnyObject) {
         if isPlaying {
             audioPlayer.pause()
@@ -29,7 +29,7 @@ class ViewController: UIViewController {
             audioPlayer.play()
             isPlaying = true
             
-            timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: "updateTime", userInfo: nil, repeats: true)
+            timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: #selector(ViewController.updateTime), userInfo: nil, repeats: true)
         }
     }
     
@@ -55,14 +55,19 @@ class ViewController: UIViewController {
         trackTitle.text = "What's Up - 4 Non Blondes"
         let path = NSBundle.mainBundle().URLForResource("What's Up - 4 Non Blondes", withExtension: "mp3")
         
-        let audioPlayer = try? AVAudioPlayer(contentsOfURL: path!, fileTypeHint: [])
+        do {
+            audioPlayer = try AVAudioPlayer(contentsOfURL: path!)
+            audioPlayer.prepareToPlay()
+        } catch {
+            NSLog("error")
+        }
+        
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
+
+
+
+
+
 
