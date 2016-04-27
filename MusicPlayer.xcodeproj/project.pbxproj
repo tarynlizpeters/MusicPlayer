@@ -12,6 +12,7 @@
 		950408381CD002FC0044E225 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 950408361CD002FC0044E225 /* Main.storyboard */; };
 		9504083A1CD002FC0044E225 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 950408391CD002FC0044E225 /* Assets.xcassets */; };
 		9504083D1CD002FC0044E225 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9504083B1CD002FC0044E225 /* LaunchScreen.storyboard */; };
+		950408451CD039870044E225 /* WhatsUp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 950408441CD039870044E225 /* WhatsUp.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		950408391CD002FC0044E225 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9504083C1CD002FC0044E225 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9504083E1CD002FC0044E225 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		950408441CD039870044E225 /* WhatsUp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = WhatsUp.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 				950408341CD002FC0044E225 /* ViewController.swift */,
 				950408361CD002FC0044E225 /* Main.storyboard */,
 				950408391CD002FC0044E225 /* Assets.xcassets */,
+				950408441CD039870044E225 /* WhatsUp.mp3 */,
 				9504083B1CD002FC0044E225 /* LaunchScreen.storyboard */,
 				9504083E1CD002FC0044E225 /* Info.plist */,
 			);
@@ -123,6 +126,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9504083D1CD002FC0044E225 /* LaunchScreen.storyboard in Resources */,
+				950408451CD039870044E225 /* WhatsUp.mp3 in Resources */,
 				9504083A1CD002FC0044E225 /* Assets.xcassets in Resources */,
 				950408381CD002FC0044E225 /* Main.storyboard in Resources */,
 			);

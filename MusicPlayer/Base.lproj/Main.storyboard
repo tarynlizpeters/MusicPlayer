@@ -3,6 +3,9 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,20 +20,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6wS-fy-qoR">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6wS-fy-qoR">
                                 <rect key="frame" x="16" y="60" width="568" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jc2-sE-pRn">
-                                <rect key="frame" x="250" y="120" width="100" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="00:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jc2-sE-pRn">
+                                <rect key="frame" x="230" y="120" width="150" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="QRJ-p8-979"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ef-1z-Trp">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ef-1z-Trp">
                                 <rect key="frame" x="16" y="220" width="102" height="102"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="102" id="AkA-lc-l49"/>
+                                    <constraint firstAttribute="height" constant="102" id="GHK-TA-KtG"/>
+                                </constraints>
                                 <state key="normal" title="Play/Pause">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -38,8 +48,11 @@
                                     <action selector="playPauseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iZ5-oT-VeC"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLU-T3-2sx">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hLU-T3-2sx">
                                 <rect key="frame" x="484" y="220" width="102" height="102"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="102" id="EIq-SH-S4W"/>
+                                </constraints>
                                 <state key="normal" title="Stop">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -49,6 +62,19 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6wS-fy-qoR" firstAttribute="leading" secondItem="9ef-1z-Trp" secondAttribute="leading" id="Ctf-u6-MXh"/>
+                            <constraint firstItem="9ef-1z-Trp" firstAttribute="baseline" secondItem="hLU-T3-2sx" secondAttribute="firstBaseline" id="KkA-Yh-IGM"/>
+                            <constraint firstItem="6wS-fy-qoR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qc0-ux-32u"/>
+                            <constraint firstItem="6wS-fy-qoR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-4" id="aNl-lN-Vuq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="hLU-T3-2sx" secondAttribute="trailing" constant="-6" id="dpz-dn-0Jb"/>
+                            <constraint firstItem="9ef-1z-Trp" firstAttribute="top" secondItem="hLU-T3-2sx" secondAttribute="top" id="mYZ-gR-kHE"/>
+                            <constraint firstItem="jc2-sE-pRn" firstAttribute="top" secondItem="6wS-fy-qoR" secondAttribute="bottom" constant="43" id="mri-lA-f71"/>
+                            <constraint firstItem="6wS-fy-qoR" firstAttribute="centerX" secondItem="jc2-sE-pRn" secondAttribute="centerX" id="nKm-b4-HqJ"/>
+                            <constraint firstItem="6wS-fy-qoR" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="nbM-lA-HWi"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="9ef-1z-Trp" secondAttribute="bottom" constant="278" id="vzV-UC-WBs"/>
+                            <constraint firstItem="hLU-T3-2sx" firstAttribute="baseline" secondItem="9ef-1z-Trp" secondAttribute="firstBaseline" id="zXX-Oc-0fT"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="trackTime" destination="jc2-sE-pRn" id="qcj-mM-4O6"/>
@@ -57,6 +83,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="435" y="214"/>
         </scene>
     </scenes>
 </document>

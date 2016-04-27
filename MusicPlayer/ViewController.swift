@@ -38,7 +38,7 @@ class ViewController: UIViewController {
         let minutes = currentTime/60
         let seconds = currentTime - minutes * 60
         
-        trackTime.text = NSString(format: "%02d:$02d", minutes, seconds) as String
+        trackTime.text = NSString(format: "%02d:%02d", minutes, seconds) as String
     }
     
     
@@ -52,8 +52,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        trackTitle.text = "What's Up - 4 Non Blondes"
-        let path = NSBundle.mainBundle().URLForResource("What's Up - 4 Non Blondes", withExtension: "mp3")
+        trackTitle.text = "WhatsUp"
+        let path = NSBundle.mainBundle().URLForResource("WhatsUp", withExtension: "mp3")
         
         do {
             audioPlayer = try AVAudioPlayer(contentsOfURL: path!)
